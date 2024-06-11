@@ -22,4 +22,7 @@ public class ProductController {
     public List<ProductResponse> getAllProduct(){
         return productService.getAll();
     }
+    // Create
+    // Update
+    // Delete
 }

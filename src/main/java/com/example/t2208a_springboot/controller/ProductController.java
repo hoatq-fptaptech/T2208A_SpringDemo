@@ -3,8 +3,10 @@ package com.example.t2208a_springboot.controller;
 import com.example.t2208a_springboot.entity.Product;
 import com.example.t2208a_springboot.model.response_model.ProductResponse;
 import com.example.t2208a_springboot.service.ProductService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -25,4 +27,9 @@ public class ProductController {
     // Create
     // Update
     // Delete
+
+    public ResponseEntity<List<Product>>search(){
+
+        return null;
+    }
 }

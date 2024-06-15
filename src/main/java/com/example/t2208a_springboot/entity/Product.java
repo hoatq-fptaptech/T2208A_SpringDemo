@@ -1,5 +1,6 @@
 package com.example.t2208a_springboot.entity;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @Table(name = "products")
 @Getter
 @Setter
+@AllArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,4 +33,5 @@ public class Product {
             inverseJoinColumns = @JoinColumn(name = "order_id")
     )
     private List<Order> orders;
+
 }

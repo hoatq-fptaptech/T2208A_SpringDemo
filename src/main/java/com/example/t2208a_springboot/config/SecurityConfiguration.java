@@ -55,8 +55,8 @@ public class SecurityConfiguration {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.addAllowedHeader("*");
         corsConfiguration.addAllowedMethod("*");
-//        corsConfiguration.addAllowedOrigin("*");
-        corsConfiguration.addAllowedOrigin("localhost:3000");
+        corsConfiguration.addAllowedOrigin("*");
+//        corsConfiguration.addAllowedOrigin("localhost:3000");
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**",corsConfiguration);
 //        source.registerCorsConfiguration("/admin/**",corsConfiguration);

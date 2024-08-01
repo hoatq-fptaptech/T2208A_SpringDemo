@@ -8,6 +8,7 @@ import com.example.t2208a_springboot.service.CategoryService;
 import com.example.t2208a_springboot.service.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,8 @@ import java.util.List;
 public class ProductController {
     private ProductService productService;
     @GetMapping()
+//    @PreAuthorize("hasAnyAuthority('ADMIN')")
+    @PreAuthorize("hasAnyAuthority('PRODUCT')")
     public List<ProductResponse> getAllProduct(){
         return productService.getAll();
     }
